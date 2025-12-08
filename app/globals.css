@@ -1,0 +1,231 @@
+@import "tailwindcss";
+/* ======================================= */
+/* GOOGLE FONTS */
+/* ======================================= */
+/* @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap"); */
+
+/* ======================================= */
+/* ICON FONTS */
+/* ======================================= */
+/* @import url("../fonts/fontawesome4/css/font-awesome.css");
+@import url("../fonts/fontawesome6/css/fontawesome.css");
+@import url("../fonts/fontawesome6/css/brands.css");
+@import url("../fonts/fontawesome6/css/solid.css");
+@import url("../fonts/elegant_font/HTML_CSS/style.css");
+@import url("../fonts/et-line-font/style.css");
+@import url("../fonts/icofont/icofont.min.css"); */
+
+/* ======================================= */
+/* CSS VARIABLES (clean + optimized) */
+/* ======================================= */
+:root {
+  /* Body */
+  --body-font: "Manrope", Helvetica, Arial, sans-serif;
+  --body-size: 16px;
+  --body-color: rgba(0, 0, 0, 0.6);
+  --bg-dark-1: #101435;
+  --body-color-dark: rgba(255, 255, 255, 0.75);
+
+  /* Headings */
+  --heading-font: "Manrope", Helvetica, Arial, sans-serif;
+  --heading-weight: 700;
+  --heading-color: #000;
+
+  /* --h1-size: 80px;
+  --h2-size: 48px;
+  --h3-size: 26px;
+  --h4-size: 20px;
+  --h5-size: 18px;
+  --h6-size: 16px; */
+
+  /* Colors */
+  --bg-dark-1: #101435;
+  --bg-dark-2: #1a1e42;
+  --bg-dark-3: #1e1e1e;
+  --bg-light: #f8f9fa;
+  --bg-grey: #eeeeee;
+
+  --border-color: #bbbbbb;
+  --rounded: 10px;
+
+  /* Buttons */
+  --btn-bg: #000;
+  --btn-color: #fff;
+  --btn-radius: 6px;
+  --btn-size: 12px;
+  --btn-weight: 800;
+  --btn-padding: 4px 20px;
+
+  /* Container */
+  --container-width: 1240px;
+}
+
+/* ======================================= */
+/* BASE STYLES */
+/* ======================================= */
+
+html,
+html {
+  position: relative;
+  overflow-x: hidden;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  overflow: hidden;
+  font-family: var(--body-font);
+  font-size: var(--body-font-size);
+  font-weight: var(--body-font-weight);
+  color: var(--body-font-color);
+  padding: 0;
+  line-height: 1.8em;
+  word-spacing: 0px;
+}
+
+body {
+  color: var(--body-font-color-dark);
+  background: var(--bg-dark-1);
+}
+
+/* ======================================= */
+/* UTILITY CLASSES (like your previous CSS) */
+/* ======================================= */
+
+.bg-dark-1 {
+  background: var(--bg-dark-1) !important;
+}
+.bg-dark-2 {
+  background: var(--bg-dark-2) !important;
+}
+.bg-dark-3 {
+  background: var(--bg-dark-3) !important;
+}
+
+.bg-light {
+  background: var(--bg-light) !important;
+}
+.bg-grey {
+  background: var(--bg-grey) !important;
+}
+
+.rounded-1 {
+  border-radius: var(--rounded) !important;
+}
+
+/* Headings */
+h1 {
+  /* font-size: var(--h1-size); */
+  font-weight: var(--heading-weight);
+}
+h2 {
+  /* font-size: var(--h2-size); */
+  font-weight: var(--heading-weight);
+}
+h3 {
+  /* font-size: var(--h3-size); */
+  font-weight: var(--heading-weight);
+}
+h4 {
+  font-size: var(--h4-size);
+  font-weight: var(--heading-weight);
+}
+h5 {
+  font-size: var(--h5-size);
+  font-weight: var(--heading-weight);
+}
+h6 {
+  font-size: var(--h6-size);
+  font-weight: var(--heading-weight);
+}
+
+/* Buttons */
+.btn {
+  background: var(--btn-bg);
+  color: var(--btn-color);
+  font-size: var(--btn-size);
+  font-weight: var(--btn-weight);
+  padding: var(--btn-padding);
+  border-radius: var(--btn-radius);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  display: inline-block;
+}
+.btn:hover {
+  opacity: 0.9;
+}
+
+/* subtitlr */
+
+.subtitle {
+  position: relative;
+  font-weight: 500;
+  position: relative;
+  display: inline-block;
+  font-size: 15px;
+  padding: 2px 10px;
+  font-family: var(--body-font);
+  /*background: rgba(var(--bg-dark-1-rgb), .05);*/
+  color: var(--heading-font-color);
+  text-transform: none;
+  letter-spacing: 0;
+  line-height: 1.5em;
+  margin-bottom: 20px;
+  border-radius: 2px;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+}
+
+/* Smooth Rotate Animation */
+@keyframes smoothRotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.rotate-animation {
+  animation: smoothRotate 20s linear infinite;
+}
+
+/* sidebar scroling */
+
+::-webkit-scrollbar {
+  width: 4px;
+  background: white;
+  height: 5px;
+}
+::-webkit-scrollbar-thumb {
+  background: #442490;
+  height: 5px;
+}
+/* for marqurr */
+/* TOP: Move Left → Right */
+@keyframes marquee-left-to-right {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.marquee-left {
+  animation: marquee-left-to-right 20s linear infinite;
+}
+
+/* BOTTOM: Move Right → Left */
+@keyframes marquee-right-to-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.marquee-right {
+  animation: marquee-right-to-left 20s linear infinite;
+}
