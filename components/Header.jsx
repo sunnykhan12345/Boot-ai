@@ -93,7 +93,7 @@ export default function Header() {
             <Link
               key={link.href}
               href={link.href}
-              className="block text-white font-[var(--mainmenu-font)] font-bold text-[var(--mainmenu-font-size)]"
+              className="block text-white font-bold"
               onClick={() => setMenuOpen(false)}
             >
               {link.label}

@@ -78,6 +78,7 @@ body {
   font-size: var(--body-font-size);
   font-weight: var(--body-font-weight);
   color: var(--body-font-color);
+ 
   padding: 0;
   line-height: 1.8em;
   word-spacing: 0px;
